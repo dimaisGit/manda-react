@@ -1136,6 +1136,9 @@ footer::after {
     height: auto;
     flex: 50% 1;
 }
+.label-1.undefined {
+    height: 0;
+}
 .mainModal form  .nameField-block input{
     width: 95%;
     height: 4vw;
