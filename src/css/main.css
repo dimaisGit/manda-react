@@ -1079,7 +1079,7 @@ footer::after {
     font-family: 'Ubuntu';
     font-size: 1.4vw;
     z-index: 20;
-    top: calc(50% - .71vw);
+    top: calc(50% + 3.71vw);
     left: 1vw;
     color: #000;
 }
