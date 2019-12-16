@@ -249,6 +249,9 @@
 /* mobile */
 
 @media screen and (max-width: 630px) {
+    .container {
+        margin-bottom: 20vw;
+    }
     .regForm .couponDiv .coupon {
         flex: 100% 2 !important;
         max-width: 100% !important;
@@ -860,7 +863,7 @@
         display: none;
     }
     .prices .btn {
-        margin: -5vw auto 5vw;
+        margin: 0vw auto 5vw;
     }
     .raffle.oranged {
         background: url(../img/trees-bg-mob.png);
