@@ -2,10 +2,9 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Field, reduxForm, SubmissionError, formValueSelector } from "redux-form";
 import { RenderField } from "./RenderField";
-
+import $ from 'jquery'
 
 class UserForm extends React.Component {
-
     constructor(props) {
         super(props)
         this.state = {
@@ -42,12 +41,12 @@ class UserForm extends React.Component {
         if (!this.state.isChecked) {
             throw new SubmissionError({userConsent: 'Необходимо разрешение на обработку персональных данных', _error: 'Login failed!'})
         }
-        console.log()
+        // console.log()
         this.props.handleUpdateUser(this.props.userToken, values.userName, values.userLastName, values.userEmail, values.userBirthDate)
+       
     }
 
     onConsentChange = e => {
-        console.log(e.target.value)
         this.setState({
             isChecked: e.target.value === 'false' ? true : false
         })
@@ -55,9 +54,9 @@ class UserForm extends React.Component {
 
     onCouponSend = () => {
         const { userName, userLastName, userBirthDate, userEmail, couponCode, handleAddBarcode, userToken } = this.props
-        console.log(couponCode)
+        // console.log(couponCode)
         let differenceInYears = ((new Date()).getTime() - (new Date(userBirthDate)).getTime()) / (1000 * 3600 * 24) / 365
-        console.log(differenceInYears)
+        // console.log(differenceInYears)
         if (!userName || !userLastName || !userEmail || !userBirthDate)
             this.setState({
                 couponError: 'Заполните все поля!'
@@ -83,7 +82,7 @@ class UserForm extends React.Component {
         if (!userPrizes.length)
             return (
                 <div className='haveNoPrizesDiv'>
-                    К сожалению, у вас пока что нет купонов
+                    К сожалению, у вас пока нет купонов
                 </div>
             )
         else
@@ -105,11 +104,8 @@ class UserForm extends React.Component {
     render() {
         const { handleSubmit, submitting, userPrizes, userData} = this.props
         const { userName, userLastName, userBirthDate, userEmail } = userData
-        console.log(userPrizes)
         const { couponError, isFormHidden } = this.state
         const resultIsFormHidden = isFormHidden && userName && userLastName && userEmail && userBirthDate
-        console.log(resultIsFormHidden)
-        console.log(this.state.isFormHidden)
         return (
             <div className='userForm'>
                 <form className="regForm" onSubmit={handleSubmit(this.onHandleSubmit)}>
@@ -117,8 +113,9 @@ class UserForm extends React.Component {
                     { resultIsFormHidden && <h3 className='label-reg ' onClick={() => this.setState({isFormHidden: false})}>Нажмите для редактирования личных данных</h3>}
                     { !resultIsFormHidden &&
                         <>
-                            <h2 className="label-reg ">{ !userName || !userLastName || !userEmail || !userBirthDate ? 'Заполните форму регистрации' : 'Привет, ' + userName + '!'}</h2>
-                            <Field name="userName" component={RenderField} placeholder='Имя' index="nameField"/>
+                            <h2 className="label-reg ">{ !userName || !userLastName || !userEmail || !userBirthDate ? 'Заполните форму регистрации' : 'Привет,' + userName + '!'}</h2>
+                            
+                            <Field name="userName" title="Язык ввода - русский" component={RenderField} pattern= '^[А-Яа-яЁё]+$' placeholder='Имя' index="nameField"/>
                             <Field name="userLastName" component={RenderField} placeholder='Фамилия' index="nameField"/>
                             <Field name="userEmail" component={RenderField} type='email' placeholder='E-mail' index="nameField"/>
                             <Field name="userBirthDate" component={RenderField} type='date' placeholder='дд.мм.гггг' index="nameField"/>
