@@ -18,7 +18,7 @@ export default class MechanicsComponent extends React.Component {
                             <h2>Встречай Новый год вместе с нами!</h2>
                             <div className="blocks flexing">
                                 <div className="block first">
-                                    <p>Соверши покупку ОТ 700<small>₽</small> и получи купон (скретч-карту)</p>
+                                    <p>Соверши покупку ОТ 700<small>₽</small> и получи купон</p>
                             </div>
                                 <div className="block second">
                                     <p>Под защитным слоем ты найдешь один из подарков:</p>
