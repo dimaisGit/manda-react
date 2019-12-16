@@ -19,8 +19,18 @@ class UserForm extends React.Component {
         })
     }
 
-    componentDidUpdate() {
-        const { userToken, handleGetMyPrizes } = this.props
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        const { userToken, handleGetMyPrizes, userData } = this.props
+        const prevUserData = prevProps.userData
+        const prevUserName = prevUserData.userName
+        const prevUserLastName = prevUserData.userLastName
+        const prevUserEmail = prevUserData.userEmail
+        const prevUserBirthDate = prevUserData.userBirthDate
+        const { userName, userLastName, userBirthDate, userEmail } = userData
+        if (userName != prevUserName || userLastName != prevUserLastName || userBirthDate != prevUserBirthDate || userEmail != prevUserEmail)
+            this.setState({
+                isFormHidden: true
+            })
         if (userToken)
             handleGetMyPrizes(userToken)
     }
