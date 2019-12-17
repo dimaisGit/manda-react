@@ -1023,8 +1023,8 @@ footer::after {
     color: #ff8200;
 }
 .divButton{
-    width: 40% !important;
-    margin: 2vw 0 0!important;
+    width: 40% ;
+    margin: 2vw 0 0;
 }
 .mainModal form div:nth-child(2) {
     width: 100%;
@@ -1047,7 +1047,7 @@ footer::after {
 }
 
 .addCouponDiv {
-    margin: 0 auto !important;
+    margin: 0 auto;
     width: 80vw;
     align-items: center;
     display: flex;
@@ -1163,11 +1163,11 @@ footer::after {
         margin: auto;
 }
 .divButton {
-    height: auto !important;
-    display: block !important;
-    width: 18vw !important;
+    height: auto;
+    display: block ;
+    width: 18vw ;
     padding-bottom: 3vw;
-    margin-top: 3vw !important;
+    margin-top: 3vw ;
 }
 .mainModal form .subBut button, .divButton{
     text-align: center;
@@ -1229,7 +1229,7 @@ footer::after {
     background-size: contain;
 }
 .mainModal form div:nth-child(2).inputError, .inputError{
-    position: absolute!important;
+    position: absolute;
     bottom: 1vw;
     margin: 0;
     padding: 0;
@@ -1241,7 +1241,7 @@ footer::after {
 }
 .mainModal form div:nth-child(2).error, 
 .error{
-    position: absolute !important;
+    position: absolute ;
     width: 30vw;
     height: auto;
     background-color: #fff;
@@ -1272,8 +1272,8 @@ footer::after {
     
 }
 .haveNoPrizesDiv::-webkit-scrollbar-thumb{
-    background: none !important;
-    outline: none!important;
+    background: none ;
+    outline: none;
 }
 .haveNoPrizesDiv, .couponDiv{
     position: relative;
