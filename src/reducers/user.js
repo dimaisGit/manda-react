@@ -6,7 +6,8 @@ import {
     SET_TOKEN_TO_REDUX_SUCCESS,
     SET_TOKEN_TO_REDUX_FAIL,
     GET_MY_PRIZES_SUCCESS,
-    UPDATE_USER_SUCCESS
+    UPDATE_USER_SUCCESS,
+    CODE_ERROR
 } from "../actions/UserActions";
 
 export const initialState = {
@@ -19,7 +20,8 @@ export const initialState = {
     userName: null,
     userLastName: null,
     userEmail: null,
-    userBirthDate: null
+    userBirthDate: null,
+    codeError: ''
 }
 
 export const userReducer = (state = initialState, action) => {
@@ -39,6 +41,8 @@ export const userReducer = (state = initialState, action) => {
             return { ...state, userPrizes: action.payload}
         case UPDATE_USER_SUCCESS:
             return  { ...state, userName: action.payload.userName, userLastName: action.payload.userLastName, userEmail: action.payload.userEmail, userBirthDate: action.payload.userBirthDate}
+        case CODE_ERROR:
+            return { ...state, codeError: action.payload }
         default:
             return state
     }

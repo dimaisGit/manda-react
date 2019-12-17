@@ -112,7 +112,7 @@ class UserForm extends React.Component {
     }
 
     render() {
-        const { handleSubmit, submitting, userPrizes, userData} = this.props
+        const { handleSubmit, submitting, userPrizes, userData, codeError } = this.props
         const { userName, userLastName, userBirthDate, userEmail } = userData
         const { couponError, isFormHidden } = this.state
         const resultIsFormHidden = isFormHidden && userName && userLastName && userEmail && userBirthDate
@@ -136,7 +136,7 @@ class UserForm extends React.Component {
                         </>
                     }
                     <div className='addCouponDiv'>
-                        <Field name='couponCode' component={RenderField} couponError={couponError}/>
+                        <Field name='couponCode' component={RenderField} couponError={couponError || codeError}/>
                         <div className='subBut addCoup'>
                             <div className='divButton ' onClick={this.onCouponSend}>ДОБАВИТЬ КУПОН</div>
                         </div>
