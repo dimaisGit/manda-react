@@ -1,5 +1,5 @@
 import React from 'react'
-import { Field, reduxForm, SubmissionError, change } from "redux-form";
+import { Field, reduxForm, SubmissionError, change, stopSubmit } from "redux-form";
 import { RenderField } from "./RenderField";
 
 
@@ -17,6 +17,14 @@ class PhoneForm extends React.Component {
             this.props.handleSendCode('+7' + values.userPhone)
         else
             this.props.handleCheckCode('+7' + values.userPhone, values.userCode)
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        const { verifyCodeError, dispatch } = this.props
+        if (verifyCodeError != prevProps.verifyCodeError)
+            dispatch(stopSubmit('phone', {
+                userCode: 'Ошибка отправки кода'
+            }))
     }
 
     render() {

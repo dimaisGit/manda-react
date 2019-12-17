@@ -14,6 +14,7 @@ export const initialState = {
     codeSent: false,
     codeVerified: false,
     error: '',
+    verifyCodeError: '',
     userToken: null,
     userName: null,
     userLastName: null,
@@ -30,6 +31,8 @@ export const userReducer = (state = initialState, action) => {
         case VERIFY_CODE_SUCCESS:
             const { userToken, userName, userLastName, userEmail, userBirthDate } = action.payload
             return { ...state, codeVerified: true, userToken: userToken, userName: userName, userLastName: userLastName, userEmail: userEmail, userBirthDate: userBirthDate}
+        case VERIFY_CODE_FAIL:
+            return { ...state, verifyCodeError: action.payload}
         case SET_TOKEN_TO_REDUX_SUCCESS:
             return { ...state, userToken: action.payload}
         case GET_MY_PRIZES_SUCCESS:
