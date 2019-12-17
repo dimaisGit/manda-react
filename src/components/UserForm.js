@@ -20,6 +20,7 @@ class UserForm extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log(snapshot)
         const { userToken, handleGetMyPrizes, userData } = this.props
         const prevUserData = prevProps.userData
         const prevUserName = prevUserData.userName
