@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0b82c24d50108c9b488f80325ef469ef",
+    "revision": "7a8ba0ee221fa4bc358a7d2ae22501ec",
     "url": "/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/css/2.4c9116bc.chunk.css"
   },
   {
-    "revision": "46f5a72fa7ae2f1fec84",
+    "revision": "92c60d6fa298d3fc77c6",
     "url": "/static/css/main.259d0c28.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.58a66171.chunk.js"
   },
   {
-    "revision": "46f5a72fa7ae2f1fec84",
-    "url": "/static/js/main.ba714882.chunk.js"
+    "revision": "92c60d6fa298d3fc77c6",
+    "url": "/static/js/main.137ac840.chunk.js"
   },
   {
     "revision": "3c343c5daffbc137b225",
@@ -68,8 +68,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/Pomidorko.ad470478.woff"
   },
   {
-    "revision": "1cadac7b6d6c3cddf0be1ba590517a98",
-    "url": "/static/media/Rules.1cadac7b.pdf"
+    "revision": "656c929e37bb22b0b4a21a2496b63e32",
+    "url": "/static/media/Rules.656c929e.pdf"
   },
   {
     "revision": "345a6e0be0c7efd51dc03bb5a46575e0",
