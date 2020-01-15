@@ -16,7 +16,7 @@ class PhoneForm extends React.Component {
         }
     }
     onHandleSubmit = values => {
-        console.log('submit')
+        // console.log('submit')
         this.setState((prevState) => {
           return { timer: !prevState.timer}
         })
