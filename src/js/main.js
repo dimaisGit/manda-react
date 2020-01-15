@@ -30,5 +30,6 @@ export const initOwl = () => {
         window.$('.cancelBut').click(function(){
             window.$('.mainModal').removeClass('active')
         })
+
     });
 }
