@@ -742,6 +742,12 @@
         font-size: 3.2vw;
         height: 6vw;
     }
+
+    .mainModal form button.formCodeAgain{
+        font-size: 4.5vw;
+        margin-top: 4vw;
+    
+    }
 }
 
 @media screen and (max-width:450px) {

@@ -17,7 +17,7 @@ export const CODE_ERROR = 'CODE_ERROR'
 
 export const handleAddBarcode = (userToken, barcode) => {
     return async dispatch => {
-        let response = await fetch('http://mandarin.mywfc.ru/api/addBarcode', {
+        let response = await fetch('https://mandarin.mywfc.ru/api/addBarcode', {
             method: 'POST',
             body: JSON.stringify({
                 user_token: userToken,
@@ -38,7 +38,7 @@ export const handleAddBarcode = (userToken, barcode) => {
 
 export const handleGetMyPrizes = userToken => {
     return async dispatch => {
-        let response = await fetch('http://mandarin.mywfc.ru/api/getBarcodes', {
+        let response = await fetch('https://mandarin.mywfc.ru/api/getBarcodes', {
             method: 'POST',
             body: JSON.stringify({
                 user_token: userToken
@@ -60,7 +60,7 @@ export const handleGetMyPrizes = userToken => {
 
 export const handleCheckToken = userToken => {
     return async dispatch => {
-        let response = await fetch('http://mandarin.mywfc.ru/api/checkToken', {
+        let response = await fetch('https://mandarin.mywfc.ru/api/checkToken', {
             method: 'POST',
             body: JSON.stringify({
                 user_token: userToken
@@ -98,7 +98,7 @@ export const handleGetTokenFromLocalStorage = () => {
 
 export const handleSendCode = userPhone => {
     return async dispatch => {
-        let response = await fetch('http://mandarin.mywfc.ru/api/getCode', {
+        let response = await fetch('https://mandarin.mywfc.ru/api/getCode', {
             method: 'POST',
             body: JSON.stringify({
                 user_phone: userPhone
@@ -115,7 +115,7 @@ export const handleSendCode = userPhone => {
 
 export const handleCheckCode = (userPhone, userCode) => {
     return async dispatch => {
-        let response = await fetch('http://mandarin.mywfc.ru/api/verifyCode', {
+        let response = await fetch('https://mandarin.mywfc.ru/api/verifyCode', {
             method: 'POST',
             body: JSON.stringify({
                 user_phone: userPhone,
@@ -147,7 +147,7 @@ export const handleCheckCode = (userPhone, userCode) => {
 
 export const handleUpdateUser = (userToken, userName, userLastName, userEmail, userBirthDate) => {
     return async dispatch => {
-        let response = await fetch('http://mandarin.mywfc.ru/api/updateUser', {
+        let response = await fetch('https://mandarin.mywfc.ru/api/updateUser', {
             method: 'POST',
             body: JSON.stringify({
                 user_token: userToken,

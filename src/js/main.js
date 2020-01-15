@@ -26,9 +26,16 @@ export const initOwl = () => {
         })
         window.$('.btn').click(function(){
             window.$('.mainModal').toggleClass('active')
+            window.$('body').css({
+                'overflow' : 'hidden'
+            })
         })
         window.$('.cancelBut').click(function(){
             window.$('.mainModal').removeClass('active')
+            window.$('body').css({
+                'overflow' : 'initial'
+            })
         })
+
     });
 }
