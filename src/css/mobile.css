@@ -184,8 +184,9 @@
         background-position: top;
     }
     .mainModal form {
-        width: 50vw;
-        height: 50vw;
+        min-width: 50vw;
+        min-height: 50vw;
+        height: auto;
     }
     .mainModal form h2, .label-reg {
         max-width: 100%;
@@ -195,8 +196,9 @@
         width: 3vw;
         height: 3vw;
     }
-    .mainModal form input[name="userPhone"], .mainModal form div label.label-1::before, .mainModal form input[name="userCode"] {
+    .mainModal form input[name="userPhone"], .mainModal form div label.label-1::before, .mainModal form input[name="userCode"], .mainModal form input[name='couponCode'] {
         font-size: 2.4vw;
+        height: 5vw;
     }
     .mainModal form input[name="userPhone"] {
         padding-left: 3.64vw;
@@ -211,12 +213,28 @@
         border-radius: 3vw;
         width: 52%;
     }
+    .mainModal form.regForm .subBut, .addCouponDiv {
+        align-self: flex-start;
+        justify-content: flex-start;
+    }
     .formCodeEnt, .formCodeAgain {
         font-size: 2.2vw;
     }
     .mainModal form.regForm {
-        width: 95vw;
-        height: 52vw;
+        min-width: 95vw;
+        min-height: 52vw;
+    }
+    .mainModal form .addCouponDiv>div>div.divButton {
+        margin: 0;
+        font-size: 3.2vw;
+        padding: 0;
+        line-height: 5vw;
+    }
+    .mainModal form .subBut.addCoup {
+        margin: 2vw auto 0;
+    }
+    .mainModal form .addCouponDiv>div>div {
+        margin: 0;
     }
     .mainModal form .nameField-block input {
         font-size: 2.2vw;
@@ -253,20 +271,40 @@
         margin-bottom: 20vw;
     }
     .regForm .couponDiv .coupon {
-        flex: 100% 2 !important;
-        max-width: 100% !important;
+        flex: 100% 2;
+        max-width: 100%;
     }
     .addCouponDiv input {
-        width: 40vw !important;
-        height: 5vw !important;
+        width: 40vw;
+        height: 5vw;
+    }
+    .mainModal form input, .mainModal form input[name='couponCode'] {
+        height: 8vw;
+        line-height: 8vw;
+        font-size: 3.7vw;
+        width: 95%;
+    }
+    .mainModal form div:nth-child(2).inputError, .inputError {
+        width: 100%;
+        z-index: 200;
+        bottom: -7vw;
+        left: 0;
+        right: 0;
+        margin: auto;
+        font-size: 2.5vw;
+    }
+    .mainModal form div div.divButton {
+        height: 8vw;
+        margin-top: 3vw;
+        font-size: 4.5vw;
     }
     .coupon, .coupon span {
-        font-size: 3.5vw !important;
+        font-size: 3.5vw;
     }
     .divButton {
-        width: 30vw !important;
+        width: 30vw;
         font-size: 3vw;
-        height: 5vw !important;
+        height: 5vw;
     }
     main, section, footer {
         padding: 15vw 0;
@@ -627,8 +665,11 @@
         background-position: 100% 0;
     }
     .mainModal form.regForm {
+        min-height: 120vw;
         width: 95vw;
-        height: 85vw;
+        max-width: 100%;
+        height: auto;
+        max-height: 100vh;
     }
     .mainModal form div.cancelBut {
         width: 5vw;
@@ -639,6 +680,9 @@
         height: auto;
         flex: 100%;
         max-width: 100%;
+    }
+    .mainModal form h2.secHeading {
+        margin-top: 13vw;
     }
     .mainModal form .nameField-block input {
         height: 8.5vw;
@@ -723,9 +767,10 @@
     }
     main.oranged {
         background: url(../img/oranged-bg-main-mobile-l.png), url(../img/snowflakes-bg-mobile.png);
-        background-position: -21vw -41vw, -10vw -6vw;
-        padding-bottom: 10vw;
+        background-position: -39vw -37vw, -10vw -6vw;
+        padding-bottom: 0;
         overflow: hidden;
+        background-size: 157%, 100%;
     }
     .btn {
         font-size: 3.5vw;
@@ -875,13 +920,14 @@
         background-position: 0% 100%;
     }
     .raffle.oranged::before {
-        top: 26vw;
+        top: 31vw;
         right: 62vw;
         width: 15vw;
         height: 15vw;
         -webkit-transform: rotate(2.8deg);
         -ms-transform: rotate(2.8deg);
         transform: rotate(2.8deg);
+        background-position: 0 0;
     }
     .content-raffle {
         -webkit-box-orient: vertical;
@@ -905,6 +951,9 @@
     }
     .map.oranged {
         padding-top: 35vw;
+    }
+    .map.oranged .container {
+        margin-bottom: 0;
     }
     .mandarinMain {
         width: 40vw;
@@ -985,8 +1034,13 @@
     }
     footer p {
         padding: 0 6vw;
-        font-size: 3.2vw;
+        font-size: 3.5vw;
         line-height: 1.5;
+        text-align: justify;
+    }
+    footer::after {
+        width: 100vw;
+        height: 26vw;
     }
     .heading:before {
         background-position: 0 40%;
@@ -1052,15 +1106,15 @@
         justify-content: flex-end;
         margin-left: 2vw;
     }
-    .mainModal form div.reg-block .label-reg{
+    .mainModal form div.reg-block .label-reg {
         margin-left: 2vw;
     }
-    .mainModal form .subBut button{
+    .mainModal form .subBut button {
         width: 40%;
         font-size: 5.2vw;
         height: 8vw;
     }
-    .mainModal form.regForm{
+    .mainModal form.regForm {
         height: 95vw;
     }
 }

@@ -6,7 +6,6 @@ import PhoneForm from "../components/PhoneForm";
 class PhoneFormContainer extends React.Component {
     render() {
         const { handleSendCode, handleCheckCode, codeSent, error, verifyCodeError } = this.props
-        console.log(error)
         return (
             <>
                 <PhoneForm

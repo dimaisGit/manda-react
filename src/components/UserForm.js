@@ -20,7 +20,6 @@ class UserForm extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        console.log(snapshot)
         const { userToken, handleGetMyPrizes, userData } = this.props
         const prevUserData = prevProps.userData
         const prevUserName = prevUserData.userName
@@ -52,7 +51,6 @@ class UserForm extends React.Component {
         if (!this.state.isChecked) {
             throw new SubmissionError({userConsent: 'Необходимо разрешение на обработку персональных данных', _error: 'Login failed!'})
         }
-        // console.log()
         this.props.handleUpdateUser(this.props.userToken, values.userName, values.userLastName, values.userEmail, values.userBirthDate)
        
     }
@@ -65,9 +63,7 @@ class UserForm extends React.Component {
 
     onCouponSend = () => {
         const { userName, userLastName, userBirthDate, userEmail, couponCode, handleAddBarcode, userToken } = this.props
-        // console.log(couponCode)
         let differenceInYears = ((new Date()).getTime() - (new Date(userBirthDate)).getTime()) / (1000 * 3600 * 24) / 365
-        // console.log(differenceInYears)
         if (!userName || !userLastName || !userEmail || !userBirthDate)
             this.setState({
                 couponError: 'Заполните все поля!'
