@@ -12,10 +12,14 @@ class PhoneForm extends React.Component {
     constructor(props){
         super(props)
         this.state ={
-            timer: true
+            timer: false
         }
     }
     onHandleSubmit = values => {
+        console.log('submit')
+        this.setState((prevState) => {
+          return { timer: !prevState.timer}
+        })
         if (!values.userPhone) {
             throw new SubmissionError({ userPhone: 'Укажите корректный номер', _error: 'Login failed!' })
         }
@@ -27,7 +31,7 @@ class PhoneForm extends React.Component {
     }
     resetTimer = () => {
         this.setState({
-            timer: false
+            timer: true
         })
     }
     componentDidUpdate(prevProps, prevState, snapshot) {
@@ -46,12 +50,15 @@ class PhoneForm extends React.Component {
               return <Completionist/>;
             } else {
               // Render a countdown
-              return (this.state.timer ? <span className="formCodeAgain">Код успешно отправлен.<br/>Повторная отправка возможна через {seconds} сек.</span> : 
-              <span className="formCodeAgain">Код был отправлен повторно </span>)
+              return (<span className="formCodeAgain">
+                {this.state.timer ? 'Код успешно отправлен. \n Повторная отправка возможна через ' + seconds + ' сек.' :
+                'Код был отправлен повторно.'}
+              </span>)
+
             }
           };
         const Completionist = () => (
-            <button type='submit' disabled={submitting} className="formCodeAgain" onClick={this.resetTimer}> Отправить код повторно </button>
+            <button type='submit' disabled={submitting} className="formCodeAgain"> Отправить код повторно </button>
             );
         
         return (
@@ -62,7 +69,9 @@ class PhoneForm extends React.Component {
                 <Field name="userPhone" component={RenderField} type="tel" placeholder='9990000000' index='1' pattern="[0-9]{10}"/>
                 {codeSent && <p className="formCodeEnt">Введите код из смс:</p>}
                 {codeSent && <Field name='userCode' component={RenderField} placeholder=" " />}
-                {codeSent && <Countdown date={Date.now() + 30000}  intervalDelay={1000} precision={.3} renderer={renderer}></Countdown>}
+                {codeSent && <Countdown date={Date.now() + 60000}  intervalDelay={1000} precision={.3} renderer={renderer}>
+                  <Completionist/>
+                </Countdown>}
                 {sendError && <div className='error'>{sendError}</div>}
                 <div className="centerBut">
                     <button type="submit" disabled={submitting}>{!codeSent ? 'Получить код' : 'Подтвердить код'}</button>

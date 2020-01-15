@@ -105,6 +105,7 @@ export const handleSendCode = userPhone => {
             })
         })
         let jsR = await response.json();
+        console.log(jsR);
         if (jsR.status === 'ok') {
             dispatch({
                 type: CODE_REQUEST_SUCCESS
