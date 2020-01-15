@@ -62,7 +62,7 @@ class PhoneForm extends React.Component {
                 <Field name="userPhone" component={RenderField} type="tel" placeholder='9990000000' index='1' pattern="[0-9]{10}"/>
                 {codeSent && <p className="formCodeEnt">Введите код из смс:</p>}
                 {codeSent && <Field name='userCode' component={RenderField} placeholder=" " />}
-                {codeSent && <Countdown date={Date.now() + 5000}  intervalDelay={1000} precision={.3} renderer={renderer}></Countdown>}
+                {codeSent && <Countdown date={Date.now() + 30000}  intervalDelay={1000} precision={.3} renderer={renderer}></Countdown>}
                 {sendError && <div className='error'>{sendError}</div>}
                 <div className="centerBut">
                     <button type="submit" disabled={submitting}>{!codeSent ? 'Получить код' : 'Подтвердить код'}</button>
