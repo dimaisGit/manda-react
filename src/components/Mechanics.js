@@ -6,7 +6,8 @@ import { Tooltip } from 'react-tippy';
 import mandarin from '../img/mandar.gif'
 import $ from 'jquery'
 import {Mandarin} from './Mandarin'
-import Rub from '../img/rub.png'
+import Rub from '../img/rub.svg'
+import RubWh from '../img/rub-wh.svg'
 
 export default class MechanicsComponent extends React.Component {
     render () {
@@ -18,7 +19,10 @@ export default class MechanicsComponent extends React.Component {
                             <h2>Встречай Новый год вместе с нами!</h2>
                             <div className="blocks flexing">
                                 <div className="block first">
-                                    <p>Соверши покупку ОТ 700<small><img src={Rub} /></small> и получи купон</p>
+                                    <p>Соверши покупку ОТ 700<small><img style= {{
+                                            'max-height': '.8em',
+                                            'display': 'inline'
+                                    }}  src={RubWh} /></small> и получи купон</p>
                             </div>
                                 <div className="block second">
                                     <p>Под защитным слоем ты найдешь один из подарков:</p>
@@ -28,7 +32,7 @@ export default class MechanicsComponent extends React.Component {
                                 <div className="block no-bg">
                                     <h4>скидку до 20%</h4>
                                     <p>На следующую покупку от 700<small><img style= {{
-                                            'max-height': '.9em',
+                                            'max-height': '.8em',
                                             'display': 'inline'
                                     }} src={Rub} /></small> в <b>«ДИКСИ»</b>
                                         <Tooltip
