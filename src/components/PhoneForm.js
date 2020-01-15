@@ -43,7 +43,7 @@ class PhoneForm extends React.Component {
     }
 
     render() {
-        const { handleSubmit, submitting, codeSent, sendError, state } = this.props
+        const { handleSubmit, submitting, codeSent, sendError } = this.props
         const renderer = ({ hours, minutes, seconds, completed }) => {
             if (completed) {
               // Render a complete state
