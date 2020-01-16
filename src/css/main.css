@@ -1522,12 +1522,20 @@ span.formCodeAgain{
        
     }
     .raffle.oranged{
-        padding: 14vw 0;
+        padding: 9vw 0 12vw;
+        background-size: 103%;
+        background-position: 50%;
+        margin: -14vw 0 -11vw;
     }
     .raffle.oranged::before{
         right: 20vw;
+        top: 11.1vw;
+        width: 6vw;
     }
     .orangesAll{
         left: 40%;
+    }
+    .info{
+        margin-top: 4vw;
     }
  }
