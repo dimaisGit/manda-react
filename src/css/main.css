@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&display=swap');
 @font-face {
     font-family: 'Pomidorko';
@@ -11,12 +13,17 @@
     padding: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 input {
     -webkit-user-select:text;
-    user-select: text;
+    -moz-user-select: text;
+     -ms-user-select: text;
+         user-select: text;
 }
 
 body {
@@ -152,7 +159,8 @@ main .col .code {
     text-align: center;
     margin: 4vw 0 2vw 1.7vw;
     position: relative;
-    box-shadow: 9px 6px 10px #3331317d;
+    -webkit-box-shadow: 9px 6px 10px #3331317d;
+            box-shadow: 9px 6px 10px #3331317d;
 }
 
 .sales-block::before, .sales-block::after {
@@ -364,7 +372,10 @@ main .col .code {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .blocks:nth-child(2)::after {
@@ -376,7 +387,8 @@ main .col .code {
     background-size: contain;
     left: 38vw;
     top: 5vw;
-    filter: drop-shadow(9px 6px 10px #3331317d);
+    -webkit-filter: drop-shadow(9px 6px 10px #3331317d);
+            filter: drop-shadow(9px 6px 10px #3331317d);
 }
 
 .blocks:nth-child(2)::before {
@@ -388,7 +400,8 @@ main .col .code {
     background-size: contain;
     left: -10vw;
     top: 17vw;
-    filter: drop-shadow(9px 6px 10px #3331317d);
+    -webkit-filter: drop-shadow(9px 6px 10px #3331317d);
+            filter: drop-shadow(9px 6px 10px #3331317d);
     /* animation: animatedMand 5s infinite ; */
 }
 
@@ -404,7 +417,8 @@ main .col .code {
     font-size: 1.5vw;
     line-height: 1.5;
     position: relative;
-    box-shadow: 5px 5px 16px #9c9c9c;
+    -webkit-box-shadow: 5px 5px 16px #9c9c9c;
+            box-shadow: 5px 5px 16px #9c9c9c;
     background-color: #ff8200;
     color: #fff;
     width: 100%;
@@ -475,8 +489,13 @@ main .col .code {
 }
 
 .blocks:last-child {
-    flex-direction: row;
-    align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
 }
 
 .block.no-bg {
@@ -494,7 +513,8 @@ main .col .code {
     width: 5vw;
     height: 5vw;
     background: url(../img/arrow-no-bg-block.png) no-repeat center;
-    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
     background-size: contain;
     left: 2vw;
 }
@@ -544,7 +564,8 @@ main .col .code {
 
 .orangesAll img {
     max-width: 100%;
-    filter: drop-shadow(2px 6px 35px rgba(0, 0, 0, .25));
+    -webkit-filter: drop-shadow(2px 6px 35px rgba(0, 0, 0, .25));
+            filter: drop-shadow(2px 6px 35px rgba(0, 0, 0, .25));
 }
 
 .price-box .box {
@@ -563,7 +584,11 @@ main .col .code {
 }
 
 .price-box .box:hover img {
-    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+            transform: scale(1.5);
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
     transition: all .5s
 }
 
@@ -577,6 +602,8 @@ main .col .code {
 .price-box .box img {
     margin-bottom: 4.5vw;
     height: 10vw;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
     transition: all .5s;
     width: auto;
 }
@@ -616,7 +643,8 @@ main .col .code {
     height: 100%;
     background: url(../img/fir.png) repeat-y center;
     background-size: contain;
-    filter: drop-shadow(6px 2px 2px rgba(0, 0, 0, 0.5));
+    -webkit-filter: drop-shadow(6px 2px 2px rgba(0, 0, 0, 0.5));
+            filter: drop-shadow(6px 2px 2px rgba(0, 0, 0, 0.5));
 }
 
 .mechanics .ramka::after {
@@ -641,6 +669,8 @@ main .col .code {
     margin-top: 3vw;
     position: relative;
     cursor: pointer;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
     transition: all .3s;
     border: .1vw solid transparent;
     font-family: 'Ubuntu', sans-serif;
@@ -649,9 +679,12 @@ main .col .code {
 .btn:hover {
     background-color: #ff8200;
     color: #fff;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
     transition: all .3s;
     border: .1vw solid #fff;
-    filter: drop-shadow(2px 4px 6px #fff);
+    -webkit-filter: drop-shadow(2px 4px 6px #fff);
+            filter: drop-shadow(2px 4px 6px #fff);
 }
 
 .price-box p {
@@ -792,12 +825,16 @@ footer::after {
 }
 
 .orange-animated {
-    flex: 50% 1;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50% 1;
+            flex: 50% 1;
     width: 13vw;
     height: 25vw;
-    animation: 5s breathing ease-out infinite normal;
+    -webkit-animation: 5s breathing ease-out infinite normal;
+            animation: 5s breathing ease-out infinite normal;
     position: relative;
-    filter: drop-shadow(5px 9px 9px rgba(0, 0, 0, .3));
+    -webkit-filter: drop-shadow(5px 9px 9px rgba(0, 0, 0, .3));
+            filter: drop-shadow(5px 9px 9px rgba(0, 0, 0, .3));
 }
 
 .mandarinMain {
@@ -822,7 +859,8 @@ footer::after {
 .rightHand {
     left: auto;
     left: 19.2vw;
-    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
 }
 
 .leftBrow, .rightBrow {
@@ -837,12 +875,17 @@ footer::after {
 }
 
 .orange-animated:hover .leftBrow, .orange-animated:hover .rightBrow {
-    animation: .3s raise ease-in-out 2;
+    -webkit-animation: .3s raise ease-in-out 2;
+            animation: .3s raise ease-in-out 2;
     cursor: pointer;
 }
 
 .orange-animated:hover .mouth {
-    transform: translate(2vw, 1vw) rotate(-8deg) scale(.8, 1);
+    -webkit-transform: translate(2vw, 1vw) rotate(-8deg) scale(.8, 1);
+        -ms-transform: translate(2vw, 1vw) rotate(-8deg) scale(.8, 1);
+            transform: translate(2vw, 1vw) rotate(-8deg) scale(.8, 1);
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
     transition: all .3s;
 }
 
@@ -863,7 +906,8 @@ footer::after {
     top: 4vw;
     left: 4.6vw;
     position: absolute;
-    animation: 4s eyeClosing ease-in-out infinite;
+    -webkit-animation: 4s eyeClosing ease-in-out infinite;
+            animation: 4s eyeClosing ease-in-out infinite;
 }
 
 .rightEye {
@@ -874,7 +918,8 @@ footer::after {
     top: 5.7vw;
     left: 10vw;
     position: absolute;
-    animation: 4s eyeClosingRight ease-in-out infinite;
+    -webkit-animation: 4s eyeClosingRight ease-in-out infinite;
+            animation: 4s eyeClosingRight ease-in-out infinite;
 }
 
 .mouth {
@@ -884,6 +929,8 @@ footer::after {
     height: 8vw;
     background-size: contain;
     top: 9.2vw;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
     transition: all .3s;
     left: 5.5vw;
 }
@@ -918,7 +965,9 @@ footer::after {
     max-width: 35vw;
     font-size: 1.52vw;
     line-height: 1.5;
-    flex: 50%;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
 }
 
 .contentSnow {
@@ -934,8 +983,14 @@ footer::after {
     right: 0;
     margin: auto;
     top: 0%;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
     height: 100%;
@@ -943,6 +998,8 @@ footer::after {
 }
 
 .mainModal.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: fixed;
     top: 0;
@@ -1034,13 +1091,21 @@ footer::after {
 }
 .mainModal form div:nth-child(3),
 .mainModal form div:nth-child(4){
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: relative;
 }
 .mainModal form div div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100%;
     margin-top: 1vw;
     height: 5vw;
@@ -1049,12 +1114,18 @@ footer::after {
 .addCouponDiv {
     margin: 0 auto;
     width: 80vw;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .addCouponDiv >div:first-child{
     max-width: 50%;
-    flex:50%;
+    -webkit-box-flex:50%;
+        -ms-flex:50%;
+            flex:50%;
     position: relative;
 }
 .mainModal form input[name="userPhone"] {
@@ -1118,13 +1189,18 @@ footer::after {
     text-underline-position: under;
 }
 .nameField-block{
-    flex:50%;
+    -webkit-box-flex:50%;
+        -ms-flex:50%;
+            flex:50%;
     max-width: 50%;
     position: relative;
 }
 .regForm{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 .mainModal form.regForm{
     padding: 3vw 1.72vw;
@@ -1140,7 +1216,9 @@ footer::after {
 .mainModal form.regForm .nameField-block{
     width: 50%;
     height: auto;
-    flex: 50% 1;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50% 1;
+            flex: 50% 1;
 }
 .label-1.undefined {
     height: 0;
@@ -1158,8 +1236,11 @@ footer::after {
 }
 .mainModal form.regForm .subBut{
         width: 100%;
-        align-self: center;
-        justify-self: center;
+        -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center;
+        -ms-grid-column-align: center;
+            justify-self: center;
         margin: auto;
 }
 .divButton {
@@ -1190,18 +1271,31 @@ footer::after {
     font-weight: 400;
 }
 .mainModal form div.reg-block{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    flex: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
     max-width: 100%;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-top: 2vw;
     height: auto;
 }
 .mainModal form div.reg-block div{
     width: auto;
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     margin-right: 1vw;
     height: auto;
     margin-top: 0;
@@ -1278,7 +1372,9 @@ footer::after {
 .haveNoPrizesDiv, .couponDiv{
     position: relative;
     width: 100%;
-    flex: 100% 1;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100% 1;
+            flex: 100% 1;
     overflow-y: scroll;
     max-height: 10vw;
 }
@@ -1289,8 +1385,11 @@ footer::after {
     display: none;
 }
 .couponDiv{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 .couponDiv::-webkit-scrollbar:horizontal,
 body::-webkit-scrollbar:horizontal {
@@ -1324,7 +1423,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 .regForm .couponDiv .coupon{
-    flex: 50%;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
     font-size: 1.2vw;
     margin-top: 1vw;
     height: auto;
@@ -1351,7 +1452,9 @@ body::-webkit-scrollbar-thumb {
     margin-top: 3vw;
 }
 .mainModal form .subBut.addCoup{
-    flex: 50%;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
 }
 .mainModal form.regForm .subBut.saveUnder{
     margin-bottom: 3vw;
@@ -1398,7 +1501,13 @@ span.formCodeAgain{
     display: block;
 }
 .centerBut{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
