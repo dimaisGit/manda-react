@@ -1512,5 +1512,13 @@ span.formCodeAgain{
             align-items: center;
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-
+    .orange-animated:hover .leftBrow, .orange-animated:hover .rightBrow {
+        -webkit-animation: none;
+                animation: none;
+    }
+    .orange-animated:hover .mouth {
+            -ms-transform: none;
+                transform: none;
+       
+    }
  }
