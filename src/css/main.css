@@ -1521,4 +1521,13 @@ span.formCodeAgain{
                 transform: none;
        
     }
+    .raffle.oranged{
+        padding: 14vw 0;
+    }
+    .raffle.oranged::before{
+        right: 20vw;
+    }
+    .orangesAll{
+        left: 40%;
+    }
  }
