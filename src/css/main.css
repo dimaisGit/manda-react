@@ -75,7 +75,7 @@ p, span, a, h4 {
 
 main.oranged {
     background: url(../img/oranged-bg-main.jpg) 2% 42%, url(../img/snowflakes-bg.png) 100%;
-    background-blend-mode: overlay;
+    /* background-blend-mode: overlay; */
     background-size: 95%, 100%;
     position: relative;
 }
@@ -1511,3 +1511,11 @@ span.formCodeAgain{
         -ms-flex-align: center;
             align-items: center;
 }
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    main.oranged{
+        background: url(../img/oranged-bg-main.jpg);
+        background-size: 95%;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Overlay)";
+        background-blend-mode: none;
+    }
+ }

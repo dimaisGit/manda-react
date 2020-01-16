@@ -359,7 +359,7 @@
         background: url(../img/oranged-bg-main-mobile.jpg), url(../img/snowflakes-bg-mobile.png);
         background-size: 101%, 100%;
         background-position: 2vw -6vw, -4vw -6vw;
-        background-blend-mode: overlay;
+        /* background-blend-mode: overlay; */
         padding-top: 5vw;
     }
     .dating {
@@ -1143,12 +1143,4 @@
     .mainModal form.regForm {
         height: 95vw;
     }
-}
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-   main.oranged{
-       background: url(../img/oranged-bg-main.jpg);
-       background-size: 95%;
-       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Overlay)";
-       background-blend-mode: none;
-   }
 }
