@@ -320,7 +320,7 @@
         font-size: 3vw;
         height: 5vw;
     }
-    main, section, footer {
+    .main, section, footer {
         padding: 15vw 0;
     }
     .regForm h3.label-reg {
@@ -355,11 +355,11 @@
         -ms-flex-align: center;
         align-items: center;
     }
-    main.oranged {
+    .main.oranged {
         background: url(../img/oranged-bg-main-mobile.jpg), url(../img/snowflakes-bg-mobile.png);
         background-size: 101%, 100%;
         background-position: 2vw -6vw, -4vw -6vw;
-        /* background-blend-mode: overlay; */
+        background-blend-mode: overlay;
         padding-top: 5vw;
     }
     .dating {
@@ -787,7 +787,7 @@
         margin: auto;
         text-align: center;
     }
-    main.oranged {
+    .main.oranged {
         background: url(../img/oranged-bg-main-mobile-l.png), url(../img/snowflakes-bg-mobile.png);
         background-position: -39vw -37vw, -10vw -6vw;
         padding-bottom: 0;

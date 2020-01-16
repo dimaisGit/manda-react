@@ -73,7 +73,7 @@ p, span, a, h4 {
     background-size: cover;
 }
 
-main.oranged {
+.main.oranged {
     background: url(../img/oranged-bg-main.jpg) 2% 42%, url(../img/snowflakes-bg.png) 100%;
     background-blend-mode: overlay;
     background-size: 95%, 100%;
@@ -114,11 +114,11 @@ footer::before {
     display: flex;
 }
 
-main, section, footer {
+.main, section, footer {
     padding: 5vw 0;
 }
 
-main, .mandarined {
+.main, .mandarined {
     position: relative;
 }
 
@@ -1512,5 +1512,5 @@ span.formCodeAgain{
             align-items: center;
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  
+
  }
