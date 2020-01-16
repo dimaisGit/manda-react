@@ -122,24 +122,24 @@ main, .mandarined {
     position: relative;
 }
 
-.main.col {
+.main .col {
     /* flex:50%; */
     max-width: 50%;
 }
 
-.main.container.flexing {
+.main .container.flexing {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
     max-width: 90%;
 }
 
-.main.col:first-child, .main.col .code {
+.main .col:first-child, .main .col .code {
     z-index: 10;
     position: relative;
 }
 
-.main.col .code {
+.main .col .code {
     right: -20vw;
     top: -2vw;
     max-width: 20vw;
@@ -837,7 +837,7 @@ footer::after {
             filter: drop-shadow(5px 9px 9px rgba(0, 0, 0, .3));
 }
 
-.mandarin.main{
+.mandarinMain {
     background: url(../img/orangePieces/mandarin.svg) no-repeat center;
     background-size: contain;
     width: 20vw;
