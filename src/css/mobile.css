@@ -1148,5 +1148,7 @@
    main.oranged{
        background: url(../img/oranged-bg-main.jpg);
        background-size: 95%;
+       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Overlay)";
+       background-blend-mode: none;
    }
 }
