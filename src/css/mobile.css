@@ -24,12 +24,12 @@
         font-size: 1.8vw;
         width: 33vw;
     }
-    main .col .code {
+    .main.col .code {
         right: 0;
         top: -2vw;
         max-width: 30vw;
     }
-    main .col:first-child {
+    .main.col:first-child {
         padding-left: 3vw;
     }
     .mandarin-img {
@@ -327,7 +327,7 @@
         margin-top: 20px;
         height: 0;
     }
-    main .container.flexing {
+    .main.container.flexing {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
@@ -336,7 +336,7 @@
         -ms-flex-direction: column;
         flex-direction: column;
     }
-    main .col {
+    .main.col {
         max-width: 100%;
         -webkit-box-flex: 100%;
         -ms-flex: 100%;
@@ -454,7 +454,7 @@
         width: 54vw;
         padding: 2vw;
     }
-    main .col .code {
+    .main.col .code {
         right: -10vw;
         top: -2vw;
         max-width: 40vw;
@@ -801,7 +801,7 @@
         padding: 2vw;
         border-radius: 3.5vw;
     }
-    main .col .code {
+    .main.col .code {
         right: 6vw;
     }
     .mandarin-img {
@@ -978,7 +978,7 @@
     .map.oranged .container {
         margin-bottom: 0;
     }
-    .mandarinMain {
+    .mandarin.main{
         width: 40vw;
         height: 45vw;
         left: 2vw;

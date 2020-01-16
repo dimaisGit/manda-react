@@ -10,7 +10,7 @@ import list from '../img/prices-main/list.png'
 export default class MainComponent extends React.Component {
     render() {
         return (
-            <main className="oranged ">
+            <section class="main" className="oranged ">
                 <div className="container flexing">
                     <div className="col">
                         <a href="http://dixy.ru/" target="_blank" className="logo">
@@ -43,7 +43,7 @@ export default class MainComponent extends React.Component {
                     </div>
                 </div>
                 <div className="sky"></div>
-            </main>
+            </section>
         )
     }
 }
