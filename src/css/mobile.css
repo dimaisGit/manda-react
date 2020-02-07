@@ -95,8 +95,8 @@
     }
     .price-box {
         -webkit-box-flex: 100%;
-            -ms-flex: 100%;
-                flex: 100%;
+        -ms-flex: 100%;
+        flex: 100%;
         margin: 0 auto;
         max-width: 75%;
     }
@@ -150,13 +150,17 @@
         -ms-flex: 20%;
         flex: 20%;
         margin: 0 10vw;
+        display: none;
     }
     .info {
-        -webkit-box-flex: 80%;
-        -ms-flex: 80% 1;
-        flex: 80% 1;
-        max-width: 50vw;
-        margin: 0 5vw;
+        -webkit-box-flex: 100%;
+        -ms-flex: 100% 1;
+        flex: 100% 1;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
     }
     .content-raffle .info p {
         font-size: 2vw;
@@ -177,7 +181,7 @@
         background: url(../img/fir-2.png);
         right: 0;
         -webkit-transform: translateZ(0);
-                transform: translateZ(0);
+        transform: translateZ(0);
         background-size: 99%;
     }
     .owl-carousel .owl-stage {
@@ -185,8 +189,8 @@
         display: -ms-flexbox;
         display: flex;
         -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
     footer {
         background-size: 57%;
@@ -224,10 +228,10 @@
     }
     .mainModal form.regForm .subBut, .addCouponDiv {
         -ms-flex-item-align: start;
-            align-self: flex-start;
+        align-self: flex-start;
         -webkit-box-pack: start;
-            -ms-flex-pack: start;
-                justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
     }
     .formCodeEnt, .formCodeAgain {
         font-size: 2.2vw;
@@ -282,10 +286,13 @@
     .container {
         margin-bottom: 20vw;
     }
+    .raffle.oranged{
+        padding: 17vw 0 5vw;
+    }
     .regForm .couponDiv .coupon {
         -webkit-box-flex: 100%;
-            -ms-flex: 100% 2;
-                flex: 100% 2;
+        -ms-flex: 100% 2;
+        flex: 100% 2;
         max-width: 100%;
     }
     .addCouponDiv input {
@@ -588,10 +595,7 @@
     .prices a.btn {
         margin-top: -7vw;
     }
-    .raffle.oranged::before {
-        top: 17.5vw;
-        right: 19vw;
-    }
+    
     #map {
         height: 85vw;
     }
@@ -619,15 +623,7 @@
     .price-box p {
         font-size: 3vw;
     }
-    .raffle.oranged {
-        background: url(../img/trees-bg.svg) no-repeat, url(../img/raffle-snowflakes-bg.png) no-repeat 54%;
-        background-size: cover, 95%;
-        background-blend-mode: multiply;
-        position: relative;
-        margin: -20vw 0;
-        padding: 22vw 0;
-        margin-bottom: -10vw;
-    }
+ 
     .prices h2, .raffle.oranged h2, .map h2, .mechanics h2 {
         font-size: 4.52vw;
         max-width: 70%;
@@ -693,8 +689,8 @@
         width: 100%;
         height: auto;
         -webkit-box-flex: 100%;
-            -ms-flex: 100%;
-                flex: 100%;
+        -ms-flex: 100%;
+        flex: 100%;
         max-width: 100%;
     }
     .mainModal form h2.secHeading {
@@ -758,11 +754,9 @@
         font-size: 3.2vw;
         height: 6vw;
     }
-
-    .mainModal form button.formCodeAgain{
+    .mainModal form button.formCodeAgain {
         font-size: 4.5vw;
         margin-top: 4vw;
-    
     }
 }
 
@@ -901,7 +895,7 @@
         left: 90vw;
         -webkit-appearance: none;
         -webkit-transform: translateZ(0);
-                transform: translateZ(0);
+        transform: translateZ(0);
         background: url(../img/fir-2.png);
         background-size: 160%;
         background-position: 0% 0%;
@@ -933,25 +927,7 @@
     .prices .btn {
         margin: 0vw auto 5vw;
     }
-    .raffle.oranged {
-        background: url(../img/trees-bg-mob.png);
-        margin-top: -34vw;
-        padding: 40vw 0 47vw;
-        margin-bottom: -30vw;
-        background-size: 122%;
-        height: 150vw;
-        background-position: 0% 100%;
-    }
-    .raffle.oranged::before {
-        top: 31vw;
-        right: 62vw;
-        width: 15vw;
-        height: 15vw;
-        -webkit-transform: rotate(2.8deg);
-        -ms-transform: rotate(2.8deg);
-        transform: rotate(2.8deg);
-        background-position: 0 0;
-    }
+    
     .content-raffle {
         -webkit-box-orient: vertical;
         -webkit-box-direction: reverse;
@@ -1079,7 +1055,6 @@
     }
     .mainModal form h2, .label-reg {
         font-size: 6vw;
-        
     }
     .mainModal form div label.label-1::before {
         top: 4.3vw;
@@ -1128,8 +1103,8 @@
     }
     .mainModal form div.reg-block {
         -webkit-box-pack: end;
-            -ms-flex-pack: end;
-                justify-content: flex-end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
         margin-left: 2vw;
     }
     .mainModal form div.reg-block .label-reg {
