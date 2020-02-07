@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3f54efbcdf3399255023f8b6b8d4288c",
+    "revision": "98e52a2730b99c5f6d551c05a30b26d7",
     "url": "/index.html"
   },
   {
@@ -8,16 +8,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/css/2.4c9116bc.chunk.css"
   },
   {
-    "revision": "c429301e49bc3f767e80",
-    "url": "/static/css/main.9a8e23fd.chunk.css"
+    "revision": "851b5eee1e66a113926d",
+    "url": "/static/css/main.9627aa4c.chunk.css"
   },
   {
     "revision": "9230e4ae7684c0e0f116",
     "url": "/static/js/2.1852888f.chunk.js"
   },
   {
-    "revision": "c429301e49bc3f767e80",
-    "url": "/static/js/main.2ff5a993.chunk.js"
+    "revision": "851b5eee1e66a113926d",
+    "url": "/static/js/main.8004543c.chunk.js"
   },
   {
     "revision": "3c343c5daffbc137b225",
@@ -266,10 +266,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f3b525aec2327f756bcc4bb0ca1e4303",
     "url": "/static/media/tour.f3b525ae.png"
-  },
-  {
-    "revision": "9d27d08e45774de8061250edad629688",
-    "url": "/static/media/trees-bg-mob.9d27d08e.png"
   },
   {
     "revision": "591d6818534f2173e422cae762e4630c",
