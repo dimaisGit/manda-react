@@ -1,8 +1,8 @@
 {
-  "name": "m_promo",
+  "name": "tresnutye",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dimaisgit.github.io/",
+  "homepage": "https://chernyshovaalexandra.github.io/tresnutye/",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "jquery": "^3.4.1",
